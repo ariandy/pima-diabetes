@@ -11,7 +11,7 @@ activation_list = {
     "lsoftmax": nn.LogSoftmax(1)
 }
 
-def layer(n_in, n_out, batch_norm=False, activation='relu', dropout=0.0):
+def layer_wrapper(n_in, n_out, batch_norm=False, activation='relu', dropout=0.0):
     layers = [nn.Linear(n_in, n_out)]
 
     if batch_norm:
